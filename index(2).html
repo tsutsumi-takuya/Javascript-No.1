@@ -12,6 +12,14 @@
 		</style>
 	</head>
 	<body>
-		<div class="box"></div>
+		<div class="box" id="target"></div>
+
+		<script>
+			'use strict';
+
+			document.getElementById('target').addEventListener('click', () => {
+				document.getElementById('target').style.background = 'red';
+			});
+		</script>
 	</body>
 </html>
