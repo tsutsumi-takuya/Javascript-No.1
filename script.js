@@ -12,3 +12,8 @@ console.log(6/3);
 console.log(7%2);
 // 文字同士の連結
 console.log("A"+"B"+"C");
+// 変数の表示
+let name = "john";
+console.log(name);
+// 文字列での表示
+console.log("name");
