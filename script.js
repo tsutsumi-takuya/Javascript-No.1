@@ -8,3 +8,7 @@ console.log("5+2")
 console.log(3*7);
 // 割り算
 console.log(6/3);
+// 余りの表示
+console.log(7%2);
+// 文字同士の連結
+console.log("A"+"B"+"C");
