@@ -17,3 +17,9 @@ let name = "john";
 console.log(name);
 // 文字列での表示
 console.log("name");
+// 変数と文字列の連結
+let name = "鈴木"
+console.log(name+"さん");
+// 変数と文字の連結
+let number = 11;
+console.log(number+5);
