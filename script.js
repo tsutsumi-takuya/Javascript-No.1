@@ -28,3 +28,7 @@ let text = "Goodmorning";
 console.log("Mr.suzuki"+text);
 console.log("Mr.sato"+text);
 console.log("Mr.tanaka"+text);
+// 変数の更新
+let number = 7;
+number = 9;
+number = 10;
