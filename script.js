@@ -32,3 +32,9 @@ console.log("Mr.tanaka"+text);
 let number = 7;
 number = 9;
 number = 10;
+// 変数の更新と足し算
+let number = 2;
+number = number+3;
+// 省略形の書き方
+x = x+10;
+x += 10;
