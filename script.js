@@ -56,3 +56,8 @@ const number = 12;
 console.log(number < 30); // true
 console.log(number <= 12); // true
 console.log(number > 12); // false
+// 比較演算子
+const number = 12;
+console.log(number === 12); // true
+const name = "john";
+console.log(name !== "john"); // false
