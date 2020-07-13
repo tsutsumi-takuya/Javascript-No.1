@@ -41,4 +41,8 @@ x += 10;
 // 定数の定義(constは定数,letは変数)
 const name = "john";
 console.log(name);
-name = "kate"; // 定数の為、変更をする事が出来なし
+name = "kate"; // 定数の為、変更をする事が出来ない
+// テンプレートリテラル
+const name = "にんじゃわんこ";
+const age = 14;
+console.log(`${name}は${age}歳です`);
