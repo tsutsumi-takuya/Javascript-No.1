@@ -61,3 +61,11 @@ const number = 12;
 console.log(number === 12); // true
 const name = "john";
 console.log(name !== "john"); // false
+// 条件分岐
+const number = 7;
+if(number>10){
+	console.log("numberは10より大きいですより大きいです");
+}
+else{
+	console.log("numberは10は以下です");
+}
