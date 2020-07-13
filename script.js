@@ -51,3 +51,8 @@ const number = 12;
 if(number>10){
 	console.log("numberは10より大きいです");
 }
+// 真偽値の定義
+const number = 12;
+console.log(number < 30); // true
+console.log(number <= 12); // true
+console.log(number > 12); // false
