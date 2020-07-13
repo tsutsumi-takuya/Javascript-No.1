@@ -46,3 +46,8 @@ name = "kate"; // 定数の為、変更をする事が出来ない
 const name = "にんじゃわんこ";
 const age = 14;
 console.log(`${name}は${age}歳です`);
+// if文の定義
+const number = 12;
+if(number>10){
+	console.log("numberは10より大きいです");
+}
