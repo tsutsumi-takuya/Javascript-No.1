@@ -38,3 +38,7 @@ number = number+3;
 // 省略形の書き方
 x = x+10;
 x += 10;
+// 定数の定義(constは定数,letは変数)
+const name = "john";
+console.log(name);
+name = "kate"; // 定数の為、変更をする事が出来なし
