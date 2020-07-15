@@ -80,3 +80,8 @@ else if(number>5){
 else{
 	console.log("numberは5以下です");
 }
+// 且つ
+const number = 31;
+if(number>=10 && number<100){
+	console.log("numberは2桁です");
+}
