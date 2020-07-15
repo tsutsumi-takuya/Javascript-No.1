@@ -15,3 +15,13 @@ for(let number=1; number<=100; number++){
 	// 変数の定義　// 条件式　// 変数の更新
 	console.log(number);
 }
+
+// for分
+for(let number=1; number<=100; number++){
+	if(number%3 === 0){
+		console.log("3の倍数です");
+	}
+	else{
+		console.log(number);
+	}
+}
