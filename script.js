@@ -85,3 +85,14 @@ const number = 31;
 if(number>=10 && number<100){
 	console.log("numberは2桁です");
 }
+// switch文
+const color = "赤";
+switch(color){
+	case "赤": // (注意)セミコロン
+	console.log("ストップ");
+	break; // 終了の命令
+
+	case "黄色":
+	console.log("要注意");
+	break;
+}
