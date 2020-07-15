@@ -67,5 +67,16 @@ if(number>10){
 	console.log("numberは10より大きいですより大きいです");
 }
 else{
-	console.log("numberは10は以下です");
+	console.log("numberは10以下です");
+}
+// 条件分岐
+const number = 7;
+if(number<10){
+	console.log("numberは10より大きいです");
+}
+else if(number>5){
+	console.log("numberは5より大きいです");
+}
+else{
+	console.log("numberは5以下です");
 }
