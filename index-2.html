@@ -25,17 +25,20 @@
 
 	<script>
 		'use strict'; //間違いの検索
-		document.getElementById('target').addEventListener('click', () => {
-		// documentは文章全体、getElementById()でidの取得を行う
-		// addEventListenerでclickの発火
-		// () => {} はアロー関数と呼ばれている
-			// document.getElementById('target').style.background = 'pink';
-			// targetを背景色に変更
-			// document.getElementById('target').style.borderRadius = '50%';
-			// targetを円に変更
-		document.getElementById('target').classList.add('circle');
-		// circle classの追加と読み込み
+
+		const target = document.getElementById('target');
+
+		target.addEventListener('click', () => {
+			target.classList.toggle('circle');
 	});
+	// documentは文章全体、getElementById()でidの取得を行う
+	// addEventListenerでclickの発火
+	// () => {} はアロー関数と呼ばれている
+	// document.getElementById('target').style.background = 'pink'; => targetを背景色に変更
+	// document.getElementById('target').style.borderRadius = '50%'; => targetを円に変更
+	// .classList.add('circle'); => addでcircle(class)の読み込みと発火
+	// .classList.toggle('circle'); => toggleで'taget'に'circle'がなかった場合付ける、あった場合外す
+	// const(定数)で'target'の指定を行い使用
 	</script>
 
 </body>
