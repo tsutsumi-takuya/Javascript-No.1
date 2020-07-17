@@ -26,26 +26,18 @@
 	}
 </style>
 <body>
-	<div class="box" id="target1"></div>
-	<div class="box" id="target2"></div>
-	<div class="box" id="target3"></div>
 
 	<script>
 		'use strict'; //間違いの検索
 
-		const target1 = document.getElementById('target1');
-		const target2 = document.getElementById('target2');
-		const target3 = document.getElementById('target3');
+		const div = document.createElement('div');
+		div.classList.add('box');
 
-		target1.addEventListener('click', () => {
-			target1.classList.toggle('circle');
-	});
-		target2.addEventListener('click', () => {
-			target2.classList.toggle('circle');
-	});
-		target3.addEventListener('click', () => {
-			target3.classList.toggle('circle');
-	});
+		div.addEventListener('click', () => {
+			div.classList.toggle('circle');
+		});
+
+		document.body.appendChild(div);
 
 	// documentは文章全体、getElementById()でidの取得を行う
 	// addEventListenerでclickの発火
@@ -55,6 +47,7 @@
 	// .classList.add('circle'); => addでcircle(class)の読み込みと発火
 	// .classList.toggle('circle'); => toggleで'taget'に'circle'がなかった場合付ける、あった場合外す
 	// const(定数)で'target'の指定を行い使用
+	// document.body.appendChild(div); => divをbodyの子要素として追加
 
 	</script>
 
