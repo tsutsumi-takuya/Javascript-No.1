@@ -17,12 +17,18 @@
 		cursor: pointer;
 		transition: 0.8s;
 		margin: 0 8px 8px 0;
+		text-align: center;
+		line-height: 100px;
 	}
 
-	.circle {
+	.win {
 		background: pink;
 		border-radius: 50%;
 		transform: rotate(360deg);
+	}
+
+	.lose {
+		transform: scale(0.8);
 	}
 </style>
 <body>
@@ -30,14 +36,28 @@
 	<script>
 		'use strict'; //間違いの検索
 
-		const div = document.createElement('div');
-		div.classList.add('box');
+		const num = 5;
+		const winner = Math.floor(Math.random() * num); // 0 -- 4
 
-		div.addEventListener('click', () => {
-			div.classList.toggle('circle');
-		});
+		for(let i = 0; i < num; i++){
 
-		document.body.appendChild(div);
+			const div = document.createElement('div');
+			div.classList.add('box');
+
+			div.addEventListener('click', () => {
+				if(i === winner){
+					div.textContent = 'Win!!';
+					div.classList.add('win');
+				}
+				else{
+					div.textContent = 'Lose!!';
+					div.classList.add('lose');
+				}
+			});
+
+			document.body.appendChild(div);
+
+	}
 
 	// documentは文章全体、getElementById()でidの取得を行う
 	// addEventListenerでclickの発火
