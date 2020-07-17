@@ -14,5 +14,13 @@
 	}
 </style>
 <body>
-	<div class="box"></div>
+	<div class="box" id="target"></div>
+
+	<script>
+		'use strict'; //間違いの検索
+		document.getElementById('target').addEventListener('click', () => {
+			document.getElementById('target').style.background = 'red';
+		});
+	</script>
+
 </body>
