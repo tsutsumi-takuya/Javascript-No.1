@@ -12,11 +12,16 @@
 </style>
 <body>
 
-	<script src="template.js"></script>
+	<script src="template.js"></script> <!-- 外部ファイルの読み込み -->
+
+	<p id="choice">ここに日時の表示を行う</p>
 
 	<script>
 		'use strict';
 		console.log('My name is Bob!');
+		window.alert('アプリ連携が完了しました'); // アラートボックス
+		console.log(document.getElementById('choice')); // id要素の取得と出力
+		document.getElementById('choice').textContent = '通知を受け取りますか'; // textContetで要素コンテンツの書き換え
 	</script>
 
 </body>
