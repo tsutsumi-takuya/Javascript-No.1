@@ -1,1 +1,1 @@
-console.log('Hi! Nice to meet you!');
+console.log('外部ファイルの読み込み');

@@ -19,13 +19,16 @@
 	<script>
 		'use strict';
 
-		var answer = window.prompt('Game Start ??'); // プロンプトの表示 var(定数)
+		var answer = window.prompt('Game Start ??'); // プロンプトの表示 var(変数)
 		// この間でプロンプトに入力された値が代入される
 		if(answer === 'yes'){ // 比較演算子'==='で代入された値の比較
 			window.alert('Lets Go !!')
 		}
+		else if(answer === 'no'){
+			window.alert('Try Again !!')
+		}
 		else{
-			window.alert('Try Again ~');
+			window.alert('Please answer !!');
 		}
 
 		var answer = 'yes'; // answerはyes
