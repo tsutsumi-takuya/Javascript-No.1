@@ -19,26 +19,31 @@
 	<script>
 		'use strict';
 
-		var answer = window.prompt('ヘルプを見ますか？'); // プロンプトの表示 var(定数)
+		var answer = window.prompt('Game Start ??'); // プロンプトの表示 var(定数)
 		// この間でプロンプトに入力された値が代入される
-		console.log(answer);
+		if(answer === 'yes'){ // 比較演算子'==='で代入された値の比較
+			window.alert('Lets Go !!')
+		}
+		else{
+			window.alert('Try Again ~');
+		}
 
 		var answer = 'yes'; // answerはyes
 		console.log(answer);// answerの表示
 		answer = 'no';		// 代入演算子の'='を使い右のデータを左のデータに代入
 		console.log(answer);// answerの表示
 
-		console.log('My name is Bob!');
-		window.alert('アプリ連携が完了しました'); // アラートボックスの表示
-		document.getElementById('choice').textContent = new Date(); // textContetで要素コンテンツの書き換え
-		console.log(document.getElementById('choice')); // id要素の取得と出力
+		// console.log('My name is Bob!');
+		// window.alert('アプリ連携が完了しました'); // アラートボックスの表示
+		// document.getElementById('choice').textContent = new Date(); // textContetで要素コンテンツの書き換え
+		// console.log(document.getElementById('choice')); // id要素の取得と出力
 
-		if(window.confirm('ゲームスタート！準備はいい？')){
-			console.log('ゲームスタート！！'); // true
-		}
-		else{
-			console.log('また遊んでね！！'); // false
-		}
+		// if(window.confirm('ゲームスタート！準備はいい？')){
+		// 	console.log('ゲームスタート！！'); // true
+		// }
+		// else{
+		// 	console.log('また遊んでね！！'); // false
+		// }
 	</script>
 
 </body>
