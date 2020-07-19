@@ -18,10 +18,27 @@
 
 	<script>
 		'use strict';
+
+		var answer = window.prompt('ヘルプを見ますか？'); // プロンプトの表示 var(定数)
+		// この間でプロンプトに入力された値が代入される
+		console.log(answer);
+
+		var answer = 'yes'; // answerはyes
+		console.log(answer);// answerの表示
+		answer = 'no';		// 代入演算子の'='を使い右のデータを左のデータに代入
+		console.log(answer);// answerの表示
+
 		console.log('My name is Bob!');
-		window.alert('アプリ連携が完了しました'); // アラートボックス
+		window.alert('アプリ連携が完了しました'); // アラートボックスの表示
+		document.getElementById('choice').textContent = new Date(); // textContetで要素コンテンツの書き換え
 		console.log(document.getElementById('choice')); // id要素の取得と出力
-		document.getElementById('choice').textContent = '通知を受け取りますか'; // textContetで要素コンテンツの書き換え
+
+		if(window.confirm('ゲームスタート！準備はいい？')){
+			console.log('ゲームスタート！！'); // true
+		}
+		else{
+			console.log('また遊んでね！！'); // false
+		}
 	</script>
 
 </body>
