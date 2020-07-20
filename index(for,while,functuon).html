@@ -6,19 +6,13 @@
 
 <body>
 
+	<section>
+		<p id="output"></p>
+		<p id="output2"></p>
+		<p id="output3"></p>
+	</section>
+
 	<script>
-
-		var hour = new Date().getHours();
-
-		if(hour >= 19 && hour < 21){ // '&&'は左の条件trueかつ右の条件もtrueの場合
-			window.alert('30% OFF !!');
-		}
-		else if(hour === 9 || hour === 15){ // '||'は左の条件式、もしくは右の条件式がtrueの場合
-			window.alert('One more !!');
-		}
-		else{
-			window.alert('How is it ??');
-		}
 
 		for(var i = 1; i <= 10; i++){ // forは繰り返し処理で、変数++で1を足して行く
 			console.log(i+' feet');
@@ -37,9 +31,20 @@
 		}
 
 		console.log('Done.');
-		console.log('Finish count '+count+' !');
+		console.log('Finish count ' + count + ' !');
 
 		// for文は繰り返しの回数が決まっているが、while文は決まっておらず繰り返しをする
+
+		var total = function(price){ // total(ファンクション名) = function(パラメータ)
+			var tax = 0.1; // 変数taxに0.1を代入
+			return price + price * tax; // returnで右側の計算式の結果を返してくる
+		}
+
+		console.log('$ ' + total(8000) + ' !'); // ファンクションを呼び出した後に表示
+
+		document.getElementById('output').textContent = 'This prise is $' + total(8000) + ' !';
+		document.getElementById('output2').textContent = 'This prise is $' + total(100) + ' !';
+		document.getElementById('output3').textContent = 'This prise is $' + total(1250) + ' !';
 
 	</script>
 
