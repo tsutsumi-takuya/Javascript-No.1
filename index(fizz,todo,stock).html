@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lnag="ja">
+<head>
+	<title>fizz,todo,stock</title>
+</head>
+<body>
+
+	<script>
+
+		var fizzbuzz = function(num){
+			if(num%3 === 0 && num%5 === 0){ // 3と5で割った時に余りが0の場合
+				return 'FizzBuzz';
+			}
+			else if(num%3 === 0){ // 3で割った時に余りが0の場合
+				return 'Fizz';
+			}
+			else if(num%5 === 0){ // 5で割った時に余りが0の場合
+				return 'Buzz';
+			}
+			else{
+				return num;
+			}
+		}
+
+		for(var i = 1; i <= 30; i++){ // iが30まで足されて行く
+			console.log(fizzbuzz(i)); // 30まで足された値をFizzBuzz(i)に代入
+		}
+
+	</script>
+
+</body>
+</html>
