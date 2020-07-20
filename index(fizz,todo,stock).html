@@ -5,6 +5,12 @@
 </head>
 <body>
 
+	<section>
+		<h1>やる事リストの表示</h1>
+		<ul id="list">
+		</ul>
+	</section>
+
 	<script>
 
 		var fizzbuzz = function(num){
@@ -24,6 +30,21 @@
 
 		for(var i = 1; i <= 30; i++){ // iが30まで足されて行く
 			console.log(fizzbuzz(i)); // 30まで足された値をFizzBuzz(i)に代入
+		}
+
+		var todo = ['デザイン作成','データ整理','勉強会申し込み','牛乳を買う']; // 配列でデータをまとめる
+
+		todo.push('歯医者に行く'); // 配列の最後にデータの追加
+		// todo.pop(); // 配列の最後のデータを削除する
+		// todo.shift(); // 配列の最初のデータを削除する
+		// todo.unshift('学校へ行く'); // 配列の最初にデータを追加する
+
+		for(var i = 0; i < todo.length; i++){ // lengthは配列に登録されているデータの個数
+			console.log(todo[i]); // todoのカギカッコは'[]'注意
+
+			var li = document.createElement('li'); // document.createElementはタグの生成、今回は'li'タグの作成
+			li.textContent = todo[i];
+			document.getElementById('list').appendChild(li); // appendChildは()内の要素を子要素として挿入
 		}
 
 	</script>
