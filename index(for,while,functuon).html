@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>Time Sale</title>
+</head>
+
+<body>
+
+	<script>
+
+		var hour = new Date().getHours();
+
+		if(hour >= 19 && hour < 21){ // '&&'は左の条件trueかつ右の条件もtrueの場合
+			window.alert('30% OFF !!');
+		}
+		else if(hour === 9 || hour === 15){ // '||'は左の条件式、もしくは右の条件式がtrueの場合
+			window.alert('One more !!');
+		}
+		else{
+			window.alert('How is it ??');
+		}
+
+		for(var i = 1; i <= 10; i++){ // forは繰り返し処理で、変数++で1を足して行く
+			console.log(i+' feet');
+		}
+
+		var enemy = 100;
+		var attack;
+		var count = 0;
+		window.alert('Fight!!');
+
+		while(enemy > 0){ // whileは()内がtrueである限り繰り返される
+			attack = Math.floor(Math.random()*30)+1;
+			console.log('Monster ' + attack + ' damage.');
+			enemy -= attack; // '-='は左の数値から右の数値を引く
+			count++;
+		}
+
+		console.log('Done.');
+		console.log('Finish count '+count+' !');
+
+		// for文は繰り返しの回数が決まっているが、while文は決まっておらず繰り返しをする
+
+	</script>
+
+</body>
+</html>
