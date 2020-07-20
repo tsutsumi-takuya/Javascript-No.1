@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>Time Sale</title>
+</head>
+
+<body>
+
+	<script>
+
+		var hour = new Date().getHours();
+
+		if(hour >= 19 && hour < 21){ // '&&'は左の条件trueかつ右の条件もtrueの場合
+			window.alert('30% OFF !!');
+		}
+		else if(hour === 9 || hour === 15){ // '||'は左の条件式、もしくは右の条件式がtrueの場合
+			window.alert('One more !!');
+		}
+		else{
+			window.alert('How is it ??');
+		}
+
+		for(var i = 1; i <= 10; i++){
+			console.log(i+' feet');
+		}
+
+	</script>
+
+</body>
+</html>
