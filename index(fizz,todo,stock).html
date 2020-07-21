@@ -9,6 +9,14 @@
 		<h1>やる事リストの表示</h1>
 		<ul id="list">
 		</ul>
+
+		<table>
+			<tr>
+				<td id="title"></td>
+				<td id="price"></td>
+				<td id="stock"></td>
+			</tr>
+		</table>
 	</section>
 
 	<script>
@@ -46,6 +54,24 @@
 			li.textContent = todo[i];
 			document.getElementById('list').appendChild(li); // appendChildは()内の要素を子要素として挿入
 		}
+
+		var jsbook = {title:'Javascript入門',  price: 2500, stock: 3}; //'{}'でオブジェクトの作成(jsbookオブジェクト)
+		console.log(jsbook); //jsbookオブジェクトの全表示
+		console.log(jsbook.title); // jsbookのtittleプロパティの表示
+		console.log(jsbook['price']); // jsbookのpriceプロパティの表示
+
+		jsbook['stock'] = 10; // stockプロパティの書き換え
+		console.log(jsbook.stock); // jsbookのstockプロパティの表示
+
+		// ※書き方　オブジェクト名.プロパティ名　= オブジェクト名['プロパティ名']
+
+		// for(var p in jsbook){ // 変数pでプロパティ名を読み取る
+		// 	console.log(p + '=' + jsbook[p]); // jsbook[p]でプロパティ内のデータを読み取る
+		// }
+
+		document.getElementById('title').textContent = jsbook.title;
+		document.getElementById('price').textContent = '¥ ' + jsbook.price;
+		document.getElementById('stock').textContent = jsbook.stock;
 
 	</script>
 
