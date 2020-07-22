@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>submit date addZero</title>
+</head>
+<body>
+
+	<section>
+		<form action="#" id="form">
+			<input type="text" name="word"> <!-- テキストフィールドの入力内容を取得する -->
+			<input type="submit" value="検索"> <!-- フォームの送信ボタンと文字 -->
+		</form>
+	</section>
+
+	<script>
+
+		document.getElementById('form').onsubmit = function(){ // onsubmitはformに発生する
+			var search = document.getElementById('form').word.value;
+			document.getElementById('output').textContent = '『' + search + '』の検索を行なっています...';
+			return false;
+		};
+
+	</script>
+
+</body>
+</html>
