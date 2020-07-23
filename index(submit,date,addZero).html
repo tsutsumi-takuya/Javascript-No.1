@@ -11,6 +11,9 @@
 			<input type="submit" value="検索"> <!-- フォームの送信ボタンと文字 -->
 			<p id="output"></p> <!-- outputの表示を行う -->
 			<p>『NOW』：<span id="time"></span></p>
+			<h3>Standards Revival MP3</h3>
+			<div id="list">
+			</div>
 		</form>
 	</section>
 
@@ -26,8 +29,8 @@
 		var year = now.getFullYear(); // 年の取得
 		var month = now.getMonth(); // 月の取得
 		var date = now.getDate(); // 日の取得
-		var day = now.getDay();
-		var week = [ "日", "月", "火", "水", "木", "金", "土" ][day];
+		var day = now.getDay(); // 曜日の取得
+		var week = [ "日", "月", "火", "水", "木", "金", "土" ][day]; // 曜日を数字で把握する
 		var hour = now.getHours(); // 時間の取得
 		var min = now.getMinutes(); // 分数の取得
 		var second = now.getSeconds(); // 秒の取得
@@ -42,6 +45,39 @@
 
 		var output = year + '/' + (month+1) + '/' + date + '/(' + week + ') ' + ampm + ' ' + (hour%12) + ':' + min + ':' + second;
 		document.getElementById('time').textContent = output;
+
+		var addZero = function(num,digit){ // 'num'と'digit'の２つのパラメータの取得
+
+			var numString = String(num); // 数字を文字列にする処理
+			while(numString.length < digit){ // 文字列より２桁の方が多い場合
+				numString = '0' + numString; // 'numString'を導き出す
+			}
+			return numString; // 'numString'の表示をする
+		}
+
+		console.log(addZero(1,2)); // 'num'を'digit'で２桁に変換
+
+		var songs = [ // 配列の登録
+			'Eye of the Storm',
+			'Stand Out Fit In',
+			'Head High',
+			'Grow Old Die Young',
+			'Push Back',
+			'Wasted Nights',
+			'Change',
+			'Letting Go',
+			'Worst in Me',
+			'In the Stars (feat. Kiiara)'
+			];
+
+		for(var i = 0; i < songs.length; i++){ // 配列の項目分の繰り返し
+			var paragrah = document.createElement('p'); // 'p'に代入
+			paragrah.textContent = addZero(i + 1, 2) + '. ' + songs[i];
+			// 'addZero'はインデックス番号に1を足しを２桁にする(0=>1)、
+			// 'songs[i]'でその配列に入っている曲名の表示
+			document.getElementById('list').appendChild(paragrah);
+			// 'list'の中に'paragrah'を子要素として入れる
+		}
 
 	</script>
 
