@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>Math</title>
+</head>
+<body>
+
+	<section>
+		<p>円周率は<span><script>document.write(Math.PI);</script></span>です。</p>
+		<!-- Math.PIは円周率を表すプロパティ -->
+		<p>普通に切り捨てると<span><script>document.write(Math.floor(Math.PI));</script></span>です。</p>
+		<!-- Mathオブジェクトのfloorメソッドは()内の小数点以下を切り捨てる -->
+		<p>小数点第2位で切り替えると<span id="output"></span>です。</p>
+	</section>
+
+	<script>
+
+		var point = function(num,digit){
+			var time = Math.pow(10, digit); // Math.pow(a,b)で'a'を'b'乗する
+			return Math.floor(num * time)/time;
+		}
+
+		document.getElementById('output').textContent = point(Math.PI, 2);
+
+	</script>
+
+</body>
+</html>
