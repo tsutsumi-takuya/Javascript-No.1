@@ -10,7 +10,7 @@
 			<input type="text" name="word"> <!-- テキストフィールドの入力内容を取得する -->
 			<input type="submit" value="検索"> <!-- フォームの送信ボタンと文字 -->
 			<p id="output"></p> <!-- outputの表示を行う -->
-			<p>最終アクセス日時：<span id="time"></span></p>
+			<p>『NOW』：<span id="time"></span></p>
 		</form>
 	</section>
 
@@ -22,14 +22,25 @@
 			return false; // HTMLの基本動作をキャンセルする
 		};
 
-		var now = new Date();
-		var year = now.getFullYear();
-		var month = now.getMonth();
-		var date = now.getDate();
-		var hour = now.getHours();
-		var min = now.getMinutes();
+		var now = new Date(); // 'Date'オブジェクトの初期化を行い'now'に代入を行う(計算の基準となる)
+		var year = now.getFullYear(); // 年の取得
+		var month = now.getMonth(); // 月の取得
+		var date = now.getDate(); // 日の取得
+		var day = now.getDay();
+		var week = [ "日", "月", "火", "水", "木", "金", "土" ][day];
+		var hour = now.getHours(); // 時間の取得
+		var min = now.getMinutes(); // 分数の取得
+		var second = now.getSeconds(); // 秒の取得
 
-		var output = year + '/' + (month+1) + '/' + date + '' + hour + ':' + min;
+		var ampm = '';
+		if(hour < 12){
+			ampm = 'AM';
+		}
+		else{
+			ampm = 'PM';
+		}
+
+		var output = year + '/' + (month+1) + '/' + date + '/(' + week + ') ' + ampm + ' ' + (hour%12) + ':' + min + ':' + second;
 		document.getElementById('time').textContent = output;
 
 	</script>
