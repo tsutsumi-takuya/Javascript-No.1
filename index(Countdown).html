@@ -14,14 +14,14 @@
 		var countdown = function(due){
 
 			var now = new Date(); // 初期化
-			var reset = due.getTime() - now.getTime();
-			var sec = Math.floor(reset / 1000 % 60);
-			var min = Math.floor(reset / 1000 / 60) % 60;
-			var hours = Math.floor(reset / 1000 / 60 / 60) % 24;
-			var days = Math.floor(reset / 1000 / 60 / 60 / 24);
-			var count = [days,hours,min,sec];
+			var rest = due.getTime() - now.getTime(); // 基準日から同日を引く
+			var sec = Math.floor(rest / 1000 % 60);
+			var min = Math.floor(rest / 1000 / 60) % 60;
+			var hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+			var days = Math.floor(rest / 1000 / 60 / 60 / 24);
+			var count = [days,hours,min,sec]; // 変数'count'に配列として代入を行う
 
-			return count;
+			return count; // 変数'count'を戻り値として表示
 
 		}
 
@@ -29,11 +29,11 @@
 		goal.setHours(23);
 		goal.setMinutes(59);
 		goal.setSeconds(59);
-		console.log(countdown(goal));
+		console.log(countdown(goal)); // 'console'に'countdown(goal)'の表示
 
-		var counter = countdown(goal);
-		var time = counter[1] + '時間' + counter[2] + '分' + counter[3] + '秒';
-		document.getElementById('timer').textContent = time;
+		var counter = countdown(goal); // 変数'counter'に'countdown(goal)'の代入を行う
+		var time = counter[0] + '日' + counter[1] + '時間' + counter[2] + '分' + counter[3] + '秒'; // 変数'time'で配列の表示
+		document.getElementById('timer').textContent = time; // 'id = timer'に'time'が入っている
 
 	</script>
 
