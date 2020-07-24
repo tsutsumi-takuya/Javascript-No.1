@@ -31,9 +31,20 @@
 		goal.setSeconds(59);
 		console.log(countdown(goal)); // 'console'に'countdown(goal)'の表示
 
-		var counter = countdown(goal); // 変数'counter'に'countdown(goal)'の代入を行う
-		var time = counter[0] + '日' + counter[1] + '時間' + counter[2] + '分' + counter[3] + '秒'; // 変数'time'で配列の表示
-		document.getElementById('timer').textContent = time; // 'id = timer'に'time'が入っている
+		var recalc = function(){ // 繰り返しのファンクション作成
+
+			var counter = countdown(goal); // 変数'counter'に'countdown(goal)'の代入を行う
+			var time = counter[1] + '時間' + counter[2] + '分' + counter[3] + '秒'; // 変数'time'で配列の表示
+			document.getElementById('timer').textContent = time; // 'id = timer'に'time'が入っている
+			refresh();
+
+		}
+
+		var refresh = function(){
+			setTimeout(recalc, 1000); // 'setTimeout(ファンクション,待ち時間)' => 1秒後に'recalc'ファンクションの実行
+		}
+
+		recalc(); // 'recalc'ファンクションの表示
 
 	</script>
 
