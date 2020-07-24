@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>CountDown Timer</title>
+</head>
+<body>
+
+	<script>
+
+		var countdown = function(due){
+
+			var now = new Date(); // 初期化
+			var reset = due.getTime() - now.getTime();
+			var sec = Math.floor(reset / 1000 % 60);
+			var min = Math.floor(reset / 1000 / 60) % 60;
+			var hours = Math.floor(reset / 1000 / 60 / 60) % 24;
+			var days = Math.floor(reset / 1000 / 60 / 60 / 24);
+			var count = [days,hours,min,sec];
+
+			return count;
+
+		}
+	</script>
+
+</body>
+</html>
