@@ -6,7 +6,8 @@
 <body>
 
 	<section>
-		<p>いまから<span id="timer"></span>以内に注文すると50%OFF !!</p>
+		<h3>東京オリンピックまで</h3>
+		<h2><p class="timer">あと<span id="day"></span>日<span id="hour"></span>時間<span id="min"></span>分<span id="sec"></span>秒 !!</p></h2>
 	</section>
 
 	<script>
@@ -25,17 +26,25 @@
 
 		}
 
-		var goal = new Date();
-		goal.setHours(23);
-		goal.setMinutes(59);
-		goal.setSeconds(59);
+		var goal = new Date(2021, 6, 24);
+
+		// goal.setHours(23);
+		// goal.setMinutes(59);
+		// goal.setSeconds(59);
+
 		console.log(countdown(goal)); // 'console'に'countdown(goal)'の表示
 
 		var recalc = function(){ // 繰り返しのファンクション作成
 
 			var counter = countdown(goal); // 変数'counter'に'countdown(goal)'の代入を行う
-			var time = counter[1] + '時間' + counter[2] + '分' + counter[3] + '秒'; // 変数'time'で配列の表示
-			document.getElementById('timer').textContent = time; // 'id = timer'に'time'が入っている
+
+			// var time = counter[1] + '時間' + counter[2] + '分' + counter[3] + '秒'; // 変数'time'で配列の表示
+			// document.getElementById('timer').textContent = time; // 'id = timer'に'time'が入っている
+
+			document.getElementById('day').textContent = counter[0];
+			document.getElementById('hour').textContent = counter[1];
+			document.getElementById('min').textContent = counter[2];
+			document.getElementById('sec').textContent = counter[3];
 			refresh();
 
 		}
