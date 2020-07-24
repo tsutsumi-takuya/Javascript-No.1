@@ -7,7 +7,7 @@
 
 	<section>
 		<h3>東京オリンピックまで</h3>
-		<h2><p class="timer">あと<span id="day"></span>日<span id="hour"></span>時間<span id="min"></span>分<span id="sec"></span>秒 !!</p></h2>
+		<h1><p class="timer"><span id="day"></span>日<span id="hour"></span>時間<span id="min"></span>分<span id="sec"></span>秒 !!</p></h1>
 	</section>
 
 	<script>
@@ -26,7 +26,7 @@
 
 		}
 
-		var goal = new Date(2021, 6, 24);
+		var goal = new Date(2021, 6, 24); // 日時を指定した状態でオブジェクトの初期化　※月は実際の月から'-1'した数値を記入
 
 		// goal.setHours(23);
 		// goal.setMinutes(59);
