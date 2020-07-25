@@ -8,6 +8,25 @@
 	<section>
 		<h3>東京オリンピックまで</h3>
 		<h1><p class="timer"><span id="day"></span>日<span id="hour"></span>時間<span id="min"></span>分<span id="sec"></span>秒 !!</p></h1>
+
+		<form id="form">
+			<select name="select"> <!-- 'select'タグでプルダウンのメニュー作成 -->
+				<option value="index(japanese).html">日本語</option> 	<!-- 'option value'の後に遷移先のファイル名の記載 -->
+				<option value="index(english).html">English</option>	<!-- 'option value'の後に遷移先のファイル名の記載 -->
+				<option value="index(chinese).html">中文</option>		<!-- 'option value'の後に遷移先のファイル名の記載 -->
+			</select>
+		</form>
+
+		<h3>あなたの時間は限られている。</br>
+			だから他人の人生を生きたりして無駄に過ごしてはいけない。</br>
+			ドグマ（教義、常識、既存の理論）にとらわれるな。</br>
+			それは他人の考えた結果で生きていることなのだから。</br>
+			他人の意見が雑音のようにあなたの内面の声をかき消したりすることのないようにしなさい。</br>
+			そして最も重要なのは、自分の心と直感を信じる勇気を持ちなさい。</br>
+			それはどういうわけかあなたが本当になりたいものをすでによく知っているのだから。</br>
+			それ以外のことは、全部二の次の意味しかない。</br>
+		</h3>
+
 	</section>
 
 	<script>
@@ -56,6 +75,8 @@
 		recalc(); // 'recalc'ファンクションの表示
 
 	</script>
+
+	<script src="script(pulldown).js"></script>
 
 </body>
 </html>
