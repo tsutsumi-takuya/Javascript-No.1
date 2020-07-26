@@ -15,8 +15,28 @@
 			<input type="submit" name="送信する" id="submit"></br>
 		</form>
 
+		<button id="remove">クッキー削除</botton>
+
+		<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
 	<script>
-		
+
+		document.getElementById('form').onsubmit = function(){
+
+			if(Cookies.get('answered') === 'yes'){
+				window.alert('既に回答いただいております');
+				return false;
+			}
+			else{
+				Cookies.set('answered', 'yes', {expires: 7});
+			}
+		};
+
+		document.getElementById('remove').onclick = function(){
+
+			Cookies.remove('answered');
+
+		};
 
 	</script>
 
