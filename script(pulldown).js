@@ -13,7 +13,7 @@ var lang = document.querySelector('html').lang; // 'document.querySelector('CSS�
 // 	opt = document.querySelector('option[value="index(chinese).html"]');
 // }
 
-switch(lang){
+switch(lang){ // if文とswitch文,どちらでも書くことが出来る
 
 	case'ja':
 	opt = document.querySelector('option[value="index(japanese).html"]');
