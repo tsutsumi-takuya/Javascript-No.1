@@ -21,18 +21,18 @@
 
 	<script>
 
-		document.getElementById('form').onsubmit = function(){
+		document.getElementById('form').onsubmit = function(){ // 送信ボタンがクリックされると発火
 
-			if(Cookies.get('answered') === 'yes'){
+			if(Cookies.get('answered') === 'yes'){ // 'answered'が'yes'だった場合
 				window.alert('既に回答いただいております');
-				return false;
+				return false; // 遷移先に遷移せずアラートの表示を行う
 			}
 			else{
-				Cookies.set('answered', 'yes', {expires: 7});
+				Cookies.set('answered', 'yes', {expires: 7}); // Cookies.set('クッキー名', '値', {expires: 有効期限});
 			}
 		};
 
-		document.getElementById('remove').onclick = function(){
+		document.getElementById('remove').onclick = function(){ // 削除ボタンがクリックされると発火
 
 			Cookies.remove('answered');
 
