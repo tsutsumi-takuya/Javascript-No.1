@@ -48,11 +48,13 @@
 
 	<script>
 
-		var thumbs = document.querySelectorAll('.thumb');
+		var thumbs = document.querySelectorAll('.thumb'); // CSSセレクタのマッチする全ての要素を取得する
+		// console.log(thumbs); // 'thumbs'に入っている要素の確認
 
 		for(var i = 0; i < thumbs.length; i++){
-			thumbs[i].onclick = function(){
-				console.log(this.dataset.image);
+			thumbs[i].onclick = function(){ // clickで発火
+				document.getElementById('bigimg').src = this.dataset.image; // id要素'bigimg'を取得、'取得した要素.属性=値'を右側に記載
+				// console.log(this.dataset.image); // 取得した要素.dataset.名前
 			};
 		}
 
