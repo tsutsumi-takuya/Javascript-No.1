@@ -21,7 +21,7 @@
 		<div class="slide">
 
 			<div class="image_box">
-				<img id="main_image" src="image1.jpg">
+				<img id="main_image" src="images/img1.jpg">
 			</div>
 
 			<div class="toolbar">
@@ -83,14 +83,14 @@
 			float: left;
 			width: 40px;
 			height: 40px;
-			background: url(image/prev.png) no-repeat;
+			background: url(images/right.png) no-repeat;
 		}
 
 		#next {
 			float: left;
 			width: 40px;
 			height: 40px;
-			background: url(image/prev.png) no-repeat;
+			background: url(images/left.png) no-repeat;
 		}
 
 	</style>
@@ -106,6 +106,24 @@
 				// console.log(this.dataset.image); // 取得した要素.dataset.名前
 			};
 		}
+
+		var images = ['images/img1.jpg','images/img2.jpg','images/img3.jpg','images/img4.jpg','images/img5.jpg'];
+
+		var current = 0;
+		var changeImage = function(num){
+			if(current + num >= 0 && current + num < images.length){
+				current += num;
+				document.getElementById('main_image').src = images[current];
+			}
+		};
+
+		document.getElementById('prev').onclick = function(){
+			changeImage(-1);
+		};
+
+		document.getElementById('next').onclick = function(){
+			changeImage(1);
+		};
 
 	</script>
 </body>
