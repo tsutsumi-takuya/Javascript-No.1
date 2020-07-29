@@ -27,6 +27,7 @@
 			<div class="toolbar">
 				<div class="nav">
 					<div id="prev"></div>
+					<span id="page"></span>
 					<div id="next"></div>
 				</div>
 			</div>
@@ -86,6 +87,14 @@
 			background: url(images/right.png) no-repeat;
 		}
 
+		#page {
+			display: inline-block;;
+			float: left;
+			margin-top: 8px;
+			height: 32px;
+			color: white;
+		}
+
 		#next {
 			float: left;
 			width: 40px;
@@ -108,8 +117,8 @@
 		}
 
 		var images = ['images/img1.jpg','images/img2.jpg','images/img3.jpg','images/img4.jpg','images/img5.jpg'];
+		var current = 0; // 現在何枚目の画像を表示しているかの保存用変数
 
-		var current = 0;
 		var changeImage = function(num){
 			if(current + num >= 0 && current + num < images.length){
 				current += num;
@@ -117,12 +126,12 @@
 			}
 		};
 
-		document.getElementById('prev').onclick = function(){
-			changeImage(-1);
+		document.getElementById('prev').onclick = function(){ // '.onclick'で発火
+			changeImage(-1); // 画像を１つ戻す場合、変数から-1して表示をする
 		};
 
-		document.getElementById('next').onclick = function(){
-			changeImage(1);
+		document.getElementById('next').onclick = function(){ // '.onclick'で発火
+			changeImage(1); // 画像を１つ進める場合、変数を+1して表示をする
 		};
 
 	</script>
