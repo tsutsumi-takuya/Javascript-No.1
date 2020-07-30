@@ -119,12 +119,19 @@
 		var images = ['images/img1.jpg','images/img2.jpg','images/img3.jpg','images/img4.jpg','images/img5.jpg'];
 		var current = 0; // 現在何枚目の画像を表示しているかの保存用変数
 
+		var pageNum = function(){
+			document.getElementById('page').textContent = (current+1) + '/' + images.length;
+		}
+
 		var changeImage = function(num){
 			if(current + num >= 0 && current + num < images.length){
 				current += num;
 				document.getElementById('main_image').src = images[current];
+				pageNum();
 			}
 		};
+
+		pageNum();
 
 		document.getElementById('prev').onclick = function(){ // '.onclick'で発火
 			changeImage(-1); // 画像を１つ戻す場合、変数から-1して表示をする
